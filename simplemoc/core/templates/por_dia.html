@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Por_Dia</title>
+    </head>
+
+    <body>
+      <table>
+        <tr>
+          <td><b>PESSOA</b></td>
+          <td><b>DIA</b></td>
+        </tr>
+
+      {% for por_dia in lista_por_dia %}
+      <tr>
+      <td>{{por_dia.pessoa}}</td>
+      <td>{{por_dia.dia}}
+      </tr>
+      {% endfor %}
+  </table>
+    </body>
+</html>

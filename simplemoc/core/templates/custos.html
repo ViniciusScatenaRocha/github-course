@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Custos</title>
+    </head>
+
+    <body>
+      <table>
+      <tr>
+          <td><b>RESTAURANTE</b></td>
+          <td><b>COMIDA</b></td>
+          <td><b>CUSTOS</b></td>
+      </tr>
+      {% for custos in lista_custos %}
+      <tr>
+        <td>{{custos.restaurante}}</td>
+        <td>{{custos.comida}}</td>
+        <td>{{custos.custos}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+    </body>
+</html>

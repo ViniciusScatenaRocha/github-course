@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Pedidos</title>
+    </head>
+
+    <body>
+      <table>
+        <tr>
+          <td><b>PESSOA</b></td>
+          <td><b>RESTAURANTE</b></td>
+          <td><b>DIA</b></td>
+          <td><b>COMIDA</b></td>
+        </tr>
+
+      {% for pedidos in lista_pedidos %}
+      <tr>
+      <td>{{pedidos.pessoa}}</td>
+      <td>{{pedidos.restaurante}}</td>
+      <td><a href="/por_dia/{{pedidos.dia|date:"Y-m-d"}}/">{{pedidos.dia|date:"Y-m-d"}}</a></td>
+      <td>{{pedidos.comida}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+    </body>
+</html>

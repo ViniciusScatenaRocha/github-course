@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Pessoas</title>
+    </head>
+
+    <body>
+      <table>
+        <tr>
+          <td><b>NOME</b></td>
+          <td><b>IDADE </b></td>
+          <td><b>CIDADE</b></td>
+      </tr>
+      {% for pessoa in lista_pessoas %}
+      <tr>
+      <td><a href="/pedidos/{{ pessoa.id }}/">{{ pessoa.nome }}</a></td>
+      <td>{{pessoa.idade}}</td>
+      <td>{{pessoa.cidade}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+    </body>
+</html>
