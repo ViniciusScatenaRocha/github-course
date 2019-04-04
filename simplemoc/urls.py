@@ -14,14 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from simplemoc.core.views import home, home2, home3, home4
-import csv
+from django.urls import path
 
-urlpatterns = [
+from simplemoc.core.views import home, home2, home3, home4
+
+urlpatterns = {
     path('pessoas', home, name='pessoas'),
     path('custos', home2, name='custos'),
     path('pedidos/<int:id>/', home3, name='pedidos'),
-    path('por_dia/<slug:data>/',home4, name='por_dia'),
+    path('por_dia/<slug:data>/', home4, name='por_dia'),
     path('admin/', admin.site.urls),
-]
+}
